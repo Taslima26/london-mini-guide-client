@@ -3,7 +3,12 @@ import React, {useState} from 'react';
 const CategoriesButtons = () => {
   return (
     <div>
-      <button />
+          <button> Pharmacies</button>
+          <button> Collages</button>
+          <button> Hospitals</button>
+          <button> Doctors</button>
+          
+        
     </div>
   );
 };
