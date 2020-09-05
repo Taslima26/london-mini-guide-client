@@ -1,16 +1,25 @@
 import React, {useState} from 'react';
-
+import '../App.css';
+const res = [
+  {name: 'Pharmacies'},
+  {name: 'Collages'},
+  {name: 'Hospitals'},
+  {name: 'Doctors'},
+];
 const CategoriesButtons = () => {
-  return (
-    <div>
-          <button> Pharmacies</button>
-          <button> Collages</button>
-          <button> Hospitals</button>
-          <button> Doctors</button>
-          
-        
-    </div>
-  );
+  const [Toggle, setToggle] = useState(null);
+  
+
+  return res.map((button, key) => (
+   
+    <button
+      key={key}
+      className={`button ${Toggle === key ? 'toggled' : ''}`}
+      onClick={() => setToggle(key)}
+    >
+      {button.name}
+    </button>
+  ));
 };
 
 export default CategoriesButtons;

@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 const PharmacyTable = () => {
   return (
     <div>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Name</th>
