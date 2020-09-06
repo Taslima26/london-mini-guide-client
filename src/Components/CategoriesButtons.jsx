@@ -1,21 +1,23 @@
 import React, {useState} from 'react';
-import '../App.css';
+import './CategoriesButton.css';
+import CitySelect from './CitiesSelect';
 const res = [
   {name: 'Pharmacies'},
   {name: 'Collages'},
   {name: 'Hospitals'},
   {name: 'Doctors'},
 ];
-const CategoriesButtons = () => {
-  const [Toggle, setToggle] = useState(null);
-  
+const CategoriesButtons = ({City}) => {
+  const [Toggle, setToggle] = useState (null);
 
-  return res.map((button, key) => (
-   
+  console.log ('City value from CatagoriesButton', City);
+
+  return res.map ((button, key) => (
     <button
+      disabled={City === 'not selected' ? true : false}
       key={key}
       className={`button ${Toggle === key ? 'toggled' : ''}`}
-      onClick={() => setToggle(key)}
+      onClick={() => setToggle (key)}
     >
       {button.name}
     </button>

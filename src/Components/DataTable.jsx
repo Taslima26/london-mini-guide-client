@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const PharmacyTable = () => {
+const DataTable = () => {
   return (
     <div>
       <table className="table">
@@ -37,4 +37,4 @@ const PharmacyTable = () => {
   );
 };
 
-export default PharmacyTable;
+export default DataTable;

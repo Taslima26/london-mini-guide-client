@@ -1,18 +1,14 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+
+  border: greenyellow 2px solid;
 }
 
-.button {
-  background: blueviolet;
-  padding: 1em;
-  color: white;
-  border: none;
-  margin: 3px;
-  border-radius: 5px;
-  outline: none;
-}
-
-.button.toggled {
-  background: greenyellow;
-  color: black;
+.title {
+  color: blueviolet;
 }
