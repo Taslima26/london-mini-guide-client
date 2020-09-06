@@ -22,7 +22,7 @@ const CitiesSelect = ({setCity ,City}) => {
       </select>
       
     
-      <div><CategoriesButtons City={City} /></div>
+     
       <div><FetchData City={City}/></div>
     </div>
   );

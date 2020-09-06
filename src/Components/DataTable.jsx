@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
+import TableRow from './TableRow';
 
-const DataTable = ({Information}) => {
-  console.log('Information from data table', Information);
+const DataTable = ({ Information, Click }) => {
+  console.log('Set Click', Click);
+  console.log('Information from data table', Information[Click]);
+  const mapRes = Information[Click];
+  console.log(mapRes)
   return (
+   
     <div>
       <table className="table">
         <thead>
@@ -14,28 +19,21 @@ const DataTable = ({Information}) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
+          {mapRes.map((info, index) => {
+              return (
+                <TableRow
+                  info={info}
+                  
+                  key={index}
+                />
+              );
+            })}
+          </tbody>
       </table>
-    </div>
-  );
+          
+
+          </div>)
+  
 };
 
 export default DataTable;

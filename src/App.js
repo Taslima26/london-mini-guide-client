@@ -1,21 +1,21 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import CitiesSelect from './Components/CitiesSelect';
 import CategoriesButtons from './Components/CategoriesButtons';
 import DataTable from './Components/DataTable';
+import FetchData from './Components/FetchData';
 
-function App () {
-  const [City, setCity] = useState ('not selected');
+function App() {
+  const [City, setCity] = useState('not selected');
 
-  console.log (City);
+  console.log(City);
   return (
     <div className="App">
       <h1 className="title">London Mini Guide</h1>
 
       <CitiesSelect City={City} setCity={setCity} />
-
-     
+      
     </div>
   );
 }
