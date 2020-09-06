@@ -15,7 +15,7 @@ function App () {
 
       <CitiesSelect City={City} setCity={setCity} />
 
-      <DataTable />
+     
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-const DataTable = () => {
+const DataTable = ({Information}) => {
+  console.log('Information from data table', Information);
   return (
     <div>
       <table className="table">
