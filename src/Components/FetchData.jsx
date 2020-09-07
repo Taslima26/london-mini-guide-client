@@ -14,7 +14,7 @@ const FetchData = ({City}) => {
 
   return (
     <div>
-      <CategoriesButtons Information={Information} />
+      <CategoriesButtons Information={Information} City={City} />
     </div>
   );
 };

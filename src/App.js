@@ -7,7 +7,7 @@ import DataTable from './Components/DataTable';
 import FetchData from './Components/FetchData';
 
 function App() {
-  const [City, setCity] = useState('not selected');
+  const [City, setCity] = useState('');
 
   console.log(City);
   return (
