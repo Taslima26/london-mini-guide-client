@@ -1,0 +1,13 @@
+.select {
+  background: blueviolet;
+  padding: 0.9em;
+  color: white;
+  border: none;
+  margin: 0.7em;
+  border-radius: 5px;
+  outline: none;
+}
+
+.toggled {
+  color: greenyellow;
+}

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './CategoriesButton.css';
-import CitySelect from './CitiesSelect';
 import DataTable from './DataTable';
 const res = [
   {name: 'pharmacies'},
@@ -10,7 +9,6 @@ const res = [
 ];
 const CategoriesButtons = ({City, Information}) => {
   const [Click, setClick] = useState();
-  const [disabled, setDisable] = useState(true);
 
   const handleClick = (event) => {
     let buttonId = event.target.id;
@@ -28,9 +26,9 @@ const CategoriesButtons = ({City, Information}) => {
     <div>
       <button
         id={button.name}
-        disabled={City === "" ? true : false}
+        disabled={City === '' ? true : false}
+        className={`button ${City === '' ? 'toggled' : ''}`}
         key={key}
-        //   className={`button ${Click !== undefined ? 'toggled' : ''}`}
         onClick={handleClick}
       >
         {button.name}

@@ -11,7 +11,7 @@ function App() {
 
   console.log(City);
   return (
-    <div className="App">
+    <div className="App container">
       <h1 className="title">London Mini Guide</h1>
 
       <CitiesSelect City={City} setCity={setCity} />
