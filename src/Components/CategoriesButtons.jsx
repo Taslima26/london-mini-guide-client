@@ -7,7 +7,7 @@ const res = [
   {name: 'hospitals'},
   {name: 'doctors'},
 ];
-const CategoriesButtons = ({City, Information}) => {
+const CategoriesButtons = ({City, Information, goBack}) => {
   const [Click, setClick] = useState();
 
   const handleClick = (event) => {
@@ -19,9 +19,11 @@ const CategoriesButtons = ({City, Information}) => {
   };
 
   if (Click) {
-    return <DataTable Click={Click} Information={Information} />;
+
+    return <DataTable Click={Click} Information={Information} goBack={setClick} />;
   }
   console.log('City from catagories buttons', City);
+
   return res.map((button, key) => (
     <div>
       <button

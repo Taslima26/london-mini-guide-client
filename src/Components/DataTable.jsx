@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import TableRow from './TableRow';
 
-const DataTable = ({ Information, Click }) => {
+const DataTable = ({Information, Click,goBack}) => {
   console.log('Set Click', Click);
   console.log('Information from data table', Information[Click]);
   const mapRes = Information[Click];
-  console.log(mapRes)
+  const goBackToMainPage = () => {
+    goBack();
+  };
+  console.log(mapRes);
   return (
-   
     <div>
+      <button onClick={goBackToMainPage}>Go back to main page!!</button>
       <table className="table table-striped">
         <thead>
           <tr>
@@ -20,20 +23,12 @@ const DataTable = ({ Information, Click }) => {
         </thead>
         <tbody>
           {mapRes.map((info, index) => {
-              return (
-                <TableRow
-                  info={info}
-                  
-                  key={index}
-                />
-              );
-            })}
-          </tbody>
+            return <TableRow info={info} key={index} />;
+          })}
+        </tbody>
       </table>
-          
-
-          </div>)
-  
+    </div>
+  );
 };
 
 export default DataTable;
