@@ -11,7 +11,9 @@ const DataTable = ({Information, Click,goBack}) => {
   console.log(mapRes);
   return (
     <div>
-      <button onClick={goBackToMainPage}>Go back to main page!!</button>
+      <button className="btn-primary" onClick={goBackToMainPage}>
+        Go back to main page!!
+      </button>
       <table className="table table-striped">
         <thead>
           <tr>

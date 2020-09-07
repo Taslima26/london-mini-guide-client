@@ -29,7 +29,7 @@ const CategoriesButtons = ({City, Information, goBack}) => {
     <div>
       <button
         type="button"
-        class="btn"
+        className="btn"
         id={button.name}
         disabled={City === '' ? true : false}
         className={`button ${

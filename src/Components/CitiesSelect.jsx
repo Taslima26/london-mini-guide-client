@@ -15,14 +15,20 @@ const CitiesSelect = ({setCity, City}) => {
         name="cities"
         id="cities"
         onChange={changeCity}
-        className="dropdown"
+        className="dropdown-toggle"
       >
         <option className="dropdown-item" value="not selected">
           Choose a city
         </option>
-        <option className="dropdown-item" value="Harrow">Harrow</option>
-        <option  className="dropdown-item"value="Heathrow">Heathrow</option>
-        <option  className="dropdown-item" value="Stratford">Stratford</option>
+        <option className="dropdown-item" value="Harrow">
+          Harrow
+        </option>
+        <option className="dropdown-item" value="Heathrow">
+          Heathrow
+        </option>
+        <option className="dropdown-item" value="Stratford">
+          Stratford
+        </option>
       </select>
 
       <div>

@@ -8,7 +8,7 @@ function App() {
   console.log('from app', City);
   return (
     <div className="App container">
-      <h1 className="display-3">London Mini Guide</h1>
+      <h1 className="display-4">London Mini Guide</h1>
 
       {/* {City ? null: <CitiesSelect City={City} setCity={setCity} /> } */}
       <CitiesSelect City={City} setCity={setCity} />
