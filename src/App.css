@@ -5,10 +5,9 @@
   align-content: center;
   justify-content: center;
   align-self: center;
-
-  
 }
 
 .title {
-  color: blueviolet;
+  padding: 2rem;
+  font-size: 6rem;
 }

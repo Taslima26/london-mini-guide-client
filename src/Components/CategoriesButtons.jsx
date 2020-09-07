@@ -19,17 +19,22 @@ const CategoriesButtons = ({City, Information, goBack}) => {
   };
 
   if (Click) {
-
-    return <DataTable Click={Click} Information={Information} goBack={setClick} />;
+    return (
+      <DataTable Click={Click} Information={Information} goBack={setClick} />
+    );
   }
   console.log('City from catagories buttons', City);
 
   return res.map((button, key) => (
     <div>
       <button
+        type="button"
+        class="btn"
         id={button.name}
         disabled={City === '' ? true : false}
-        className={`button ${City === '' ? 'toggled' : ''}`}
+        className={`button ${
+          City === '' ? 'btn btn-secondary' : ' btn-primary'
+        }`}
         key={key}
         onClick={handleClick}
       >
